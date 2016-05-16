@@ -43,8 +43,22 @@ public class EnTest {
 	@Test
 	public void thousand() {
 		IntToEng ite = new IntToEng();
-		String expected = "thousand";
+		String expected = "one thousand";
 		String actual = ite.translateEng(1000);
+		assertThat(actual, is(expected));
+	}
+	@Test
+	public void twothousandthreehundredforty() {
+		IntToEng ite = new IntToEng();
+		String expected = "two thousand three hundred forty";
+		String actual = ite.translateEng(2340);
+		assertThat(actual, is(expected));
+	}
+	@Test
+	public void fivehundredforty() {
+		IntToEng ite = new IntToEng();
+		String expected = "five hundred forty";
+		String actual = ite.translateEng(540);
 		assertThat(actual, is(expected));
 	}
 }
