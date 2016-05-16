@@ -34,6 +34,13 @@ public class EnTest {
 		assertThat(actual, is(expected));
 	}
 	@Test
+	public void fivehundredforty() {
+		IntToEng ite = new IntToEng();
+		String expected = "five hundred forty";
+		String actual = ite.translateEng(540);
+		assertThat(actual, is(expected));
+	}
+	@Test
 	public void fivehundredninetythree() {
 		IntToEng ite = new IntToEng();
 		String expected = "five hundred ninety three";
@@ -55,10 +62,17 @@ public class EnTest {
 		assertThat(actual, is(expected));
 	}
 	@Test
-	public void fivehundredforty() {
+	public void twentythreethousand() {
 		IntToEng ite = new IntToEng();
-		String expected = "five hundred forty";
-		String actual = ite.translateEng(540);
+		String expected = "twenty three thousand";
+		String actual = ite.translateEng(23000);
+		assertThat(actual, is(expected));
+	}
+	@Test
+	public void twelvethousandthreehundredfortyfive() {
+		IntToEng ite = new IntToEng();
+		String expected = "twelve thousand three hundred forty five";
+		String actual = ite.translateEng(12345);
 		assertThat(actual, is(expected));
 	}
 }
